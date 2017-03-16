@@ -47,6 +47,12 @@ namespace Droid_Geography
             LoadFileCsv();
             LoadFileHtml();
         }
+
+        internal object Where()
+        {
+            throw new NotImplementedException();
+        }
+
         private void LoadFileCsv()
         {
             bool header = true;

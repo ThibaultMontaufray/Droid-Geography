@@ -42,7 +42,10 @@ namespace Droid_Geography
         public void FocusCountry(string countryName)
         {
             var countries = _worldMap.Countries.Where(c => c.Name.Equals(countryName)).ToList();
-            if (_worldMap.Countries.Contains(countryName))
+            if (countries.Count > 0)
+            {
+
+            }
         }
         #endregion
 

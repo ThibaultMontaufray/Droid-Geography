@@ -41,16 +41,29 @@ namespace Droid_Geography
             _worldMap = new WorldMap();
 
             comboBox1.Items.Clear();
-            comboBox2.Items.Clear();
             foreach (Country country in _worldMap.Countries)
             {
                 comboBox1.Items.Add(country.Name);
-                comboBox2.Items.Add(country.Name);
             }
+        }
+        private void LoadCountry(string country)
+        {
+            var contr = _worldMap.Countries.Where(c => c.Name.Equals(country)).First();
+            labelName.Text = "Name : " + contr.Name;
+            labelPopulation.Text = "Population : " + contr.Population;
+            labelTrigramme.Text = "Trigramme : " + contr.Trigram;
+            labelIso.Text = "Code : " + contr.Code;
+            labelArea.Text = "Superficie : " + contr.Area;
+            labelCapital.Text = "Capital : " + contr.Capitale;
+            labelCoordonate.Text = "Coordonate : " + contr.Latitude + "N " + contr.Longitude + "W";
         }
         #endregion
 
         #region Event
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadCountry(comboBox1.SelectedItem.ToString());
+        }
         #endregion
     }
 }
