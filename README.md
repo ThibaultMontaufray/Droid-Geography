@@ -7,4 +7,5 @@ Add a map to your application
 ```csharp
  Application.Run(new Droid_Geography.Demo());
 ```
-<img src="./Demo.png" />
+<img src="./Demo1.png" />
+<img src="./Demo2.png" />
