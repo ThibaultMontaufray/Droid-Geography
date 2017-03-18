@@ -13,6 +13,7 @@ namespace Droid_Geography
     public partial class WorldMapView : UserControl
     {
         #region Attribute
+        private string _newHtmlPage;
         private WorldMap _worldMap;
         private int _zoom;
         #endregion
@@ -30,7 +31,7 @@ namespace Droid_Geography
         }
         #endregion
 
-        #region 
+        #region Constructor
         public WorldMapView()
         {
             InitializeComponent();
@@ -39,31 +40,33 @@ namespace Droid_Geography
         #endregion
 
         #region Methods public
-        public void FocusCountry(string countryName)
-        {
-            var countries = _worldMap.Countries.Where(c => c.Name.Equals(countryName)).ToList();
-            if (countries.Count > 0)
-            {
-
-            }
-        }
         public void UpdateMap()
         {
-            webBrowser.DocumentText = _worldMap.WorldPage;
+            _newHtmlPage = _worldMap.WorldPage;
         }
         #endregion
 
         #region Methods private
         private void Init()
         {
+            _newHtmlPage = string.Empty;
             _worldMap = new WorldMap();
             webBrowser.DocumentText = _worldMap.WorldPage;
             webBrowser.ScriptErrorsSuppressed = true;
+            webBrowser.DocumentCompleted += WebBrowser_DocumentCompleted;
             //var v = webBrowser.Version;
         }
         #endregion
 
         #region Event
+        private void WebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(_newHtmlPage))
+            {
+                webBrowser.DocumentText = _newHtmlPage;
+                _newHtmlPage = string.Empty;
+            }
+        }
         #endregion
     }
 }

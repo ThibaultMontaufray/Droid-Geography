@@ -57,7 +57,7 @@ namespace Droid_Geography
             labelContinent.Text = "Continent : " + _worldMap.CurrentCountry.Continent;
             labelPopulation.Text = "Population : " + _worldMap.CurrentCountry.Population;
             labelTrigramme.Text = "Trigramme : " + _worldMap.CurrentCountry.Trigram;
-            labelIso.Text = "Code : " + _worldMap.CurrentCountry.Code;
+            labelIso.Text = "Code : " + _worldMap.CurrentCountry.Digram;
             labelArea.Text = "Superficie : " + _worldMap.CurrentCountry.Area;
             labelCapital.Text = "Capital : " + _worldMap.CurrentCountry.Capitale;
             labelCoordonate.Text = "Coordonate : " + _worldMap.CurrentCountry.Latitude + "N " + _worldMap.CurrentCountry.Longitude + "W";

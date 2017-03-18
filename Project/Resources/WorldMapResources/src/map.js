@@ -1153,7 +1153,7 @@ jvm.Map.defaultParams = {
       cursor: 'pointer'
     },
     selected: {
-      fill: 'orange'
+        fill: '#7FAB9E'
     },
     selectedHover: {
     }

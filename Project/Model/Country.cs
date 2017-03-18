@@ -1,4 +1,6 @@
-﻿using System;
+﻿// TODO : enrich with https://www.countrycode.org/venezuela
+
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -15,7 +17,7 @@ namespace Droid_Geography
         private Color _borderColor;
         private string _coordonates;
         private string _id;
-        private string _code;
+        private string _digram;
         private string _trigram;
         private int _population;
         private double _latitude;
@@ -80,10 +82,10 @@ namespace Droid_Geography
             set { _trigram = value; }
         }
 
-        public string Code
+        public string Digram
         {
-            get { return _code; }
-            set { _code = value; }
+            get { return _digram; }
+            set { _digram = value; }
         }
         public string Id
         {

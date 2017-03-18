@@ -79,6 +79,13 @@ namespace Droid_Geography
         #endregion
 
         #region Methods public
+        public void ClearCustomValues()
+        {
+            foreach (Country c in _countries)
+            {
+                c.CustomValue = 0;
+            }
+        }
         #endregion
 
         #region Methods private
@@ -180,7 +187,7 @@ namespace Droid_Geography
                             series:
                             {
                                 regions: [{
-                                    scale: ['#C8EEFF', '#0071A4'],
+                                    scale: ['#444033', '#FF7700'],
                                     normalizeFunction: 'polynomial',
                                     values:
                                     {
@@ -195,7 +202,7 @@ namespace Droid_Geography
                 </script>
             </head>
             <body>
-                <div id = 'map1' style='width: 600px; height: 400px'></div>
+                <div id = 'map1' style='width: 600px; height: 400px; margin: -8px;'></div>
             </body>
             </html>;";
         }
@@ -206,42 +213,45 @@ namespace Droid_Geography
             html += _htmlHeader;
             foreach (var c in _countries)
             {
-                if (_currentCountry != null && _mode == PresentationMode.COUNTRY)
-                {
-                    if (_currentCountry.Equals(c))
+                if (!string.IsNullOrEmpty(c.Digram))
+                { 
+                    if (_currentCountry != null && _mode == PresentationMode.COUNTRY)
                     {
-                        html += string.Format("              '{0}': 1,", c.Code);
+                        if (_currentCountry.Equals(c))
+                        {
+                            html += string.Format("              '{0}': 1,", c.Digram);
+                        }
+                        else
+                        { 
+                            html += string.Format("              '{0}': 0,", c.Digram);
+                        }
+                        html = html.Replace("[X]", "lat: " + _currentCountry.Latitude.ToString().Replace(',', '.'));
+                        html = html.Replace("[Y]", "lng: " + _currentCountry.Longitude.ToString().Replace(',', '.'));
+                        _zoom = 4;
                     }
                     else
-                    { 
-                        html += string.Format("              '{0}': 0,", c.Code);
-                    }
-                    html = html.Replace("[X]", "lat: " + _currentCountry.Latitude.ToString().Replace(',', '.'));
-                    html = html.Replace("[Y]", "lng: " + _currentCountry.Longitude.ToString().Replace(',', '.'));
-                    _zoom = 4;
-                }
-                else
-                {
-                    switch (_mode)
                     {
-                        case PresentationMode.AREA:
-                            html += string.Format("              '{0}': {1},", c.Code, c.Area);
-                            html = html.Replace("[X]", "x: 0.5");
-                            html = html.Replace("[Y]", "y: 0.5");
-                            break;
-                        case PresentationMode.CUSTOM:
-                            html += string.Format("              '{0}': {1},", c.Code, c.CustomValue);
-                            html = html.Replace("[X]", "x: 0.5");
-                            html = html.Replace("[Y]", "y: 0.5");
-                            break;
-                        case PresentationMode.POPULATION:
-                    default:
-                            html += string.Format("              '{0}': {1},", c.Code, c.Population);
-                            html = html.Replace("[X]", "x: 0.5");
-                            html = html.Replace("[Y]", "y: 0.5");
-                            break;
+                        switch (_mode)
+                        {
+                            case PresentationMode.AREA:
+                                html += string.Format("              '{0}': {1},", c.Digram, c.Area);
+                                html = html.Replace("[X]", "x: 0.5");
+                                html = html.Replace("[Y]", "y: 0.5");
+                                break;
+                            case PresentationMode.CUSTOM:
+                                html += string.Format("              '{0}': {1},", c.Digram, c.CustomValue);
+                                html = html.Replace("[X]", "x: 0.5");
+                                html = html.Replace("[Y]", "y: 0.5");
+                                break;
+                            case PresentationMode.POPULATION:
+                        default:
+                                html += string.Format("              '{0}': {1},", c.Digram, c.Population);
+                                html = html.Replace("[X]", "x: 0.5");
+                                html = html.Replace("[Y]", "y: 0.5");
+                                break;
+                        }
+                        _zoom = 1;
                     }
-                    _zoom = 1;
                 }
             }
             html += _htmlFooter;
@@ -276,7 +286,7 @@ namespace Droid_Geography
                             Latitude = !string.IsNullOrEmpty(tab[3]) ? double.Parse(string.Format("{0}{1},{2}",(tab[3].Contains("S") ? "-" : string.Empty), tab[3].Split('°')[0], tab[3].Split('°')[1].Split('\'')[0])) : 0,
                             Longitude = !string.IsNullOrEmpty(tab[4]) ? double.Parse(string.Format("{0}{1},{2}", (tab[4].Contains("W") ? "-" : string.Empty), tab[4].Split('°')[0], tab[4].Split('°')[1].Split('\'')[0])) : 0,
                             PhonePrefix = tab[5],
-                            Code = !string.IsNullOrEmpty(tab[6]) ? tab[6].Split(' ')[0] : string.Empty,
+                            Digram = !string.IsNullOrEmpty(tab[6]) ? tab[6].Split(' ')[0] : string.Empty,
                             Trigram = !string.IsNullOrEmpty(tab[6]) ? tab[6].Split(' ')[2] : string.Empty,
                             Population = !string.IsNullOrEmpty(tab[7]) ? int.Parse(Regex.Replace(tab[7], @"(?<=\d+)\s+(?=\d+)", "")) : 0,
                             Area = !string.IsNullOrEmpty(tab[8]) ? int.Parse(Regex.Replace(tab[8], @"(?<=\d+)\s+(?=\d+)", "")) : 0,

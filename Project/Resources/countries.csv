@@ -41,9 +41,9 @@ Chile;South America;Santiago;33°24'S;70°40'W;56;CL / CHL;16 746 491;756 950;281.
 China;Asia;Beijing;39°55'N;116°20'E;86;CN / CHN;1 330 044 000;9 596 960;9.33 Trillion
 Colombia;South America;Bogota;04°34'N;74°00'W;57;CO / COL;47 790 000;1 138 910;369.2 Billion
 Comoros;Africa;Moroni;11°40'S;43°16'E;269;KM / COM;773 407;2 170;658 Million
-Democratic Republic of the Congo;Africa;Brazzaville;04°09'S;15°12'E;243;CD / COD;70 916 439;2 345 410;18.56 Billion
+Republic of the Congo;Africa;Brazzaville;4°16'S;15°17'E;243;CG / COG;70 916 439;2 345 410;18.56 Billion
 Costa Rica;Central America;San Jose;09°55'N;84°02'W;506;CR / CRI;4 516 220;51 100;48.51 Billion
-Cote d'Ivoire;;Yamoussoukro;06°49'N;05°17'W;;;;;
+Cote d'Ivoire;;Yamoussoukro;06°49'N;05°17'W;;CI / CIV;;;
 Croatia;Europe;Zagreb;45°50'N;15°58'E;385;HR / HRV;4 491 000;56 542;59.14 Billion
 Cuba;Central America;Havana;23°08'N;82°22'W;53;CU / CUB;11 423 000;110 860;72.3 Billion
 Cyprus;Europe;Nicosia;35°10'N;33°25'E;357;CY / CYP;1 102 677;9 250;21.78 Billion
@@ -149,7 +149,7 @@ Poland;Europe;Warsaw;52°13'N;21°00'E;48;PL / POL;38 500 000;312 685;513.9 Billio
 Portugal;Europe;Lisbon;38°42'N;09°10'W;351;PT / PRT;10 676 000;92 391;219.3 Billion
 Puerto Rico;Central America;San Juan;18°28'N;66°07'W;1-787, 1-939;PR / PRI;3 916 632;9 104;93.52 Billion
 Qatar;Asia;Doha;25°15'N;51°35'E;974;QA / QAT;840 926;11 437;213.1 Billion
-Republic of Korea;;Seoul;37°31'N;126°58'E;;;;;
+Republic of Korea;;Seoul;37°31'N;126°58'E;;KR / SKR;;;
 Romania;Europe;Bucuresti;44°27'N;26°10'E;40;RO / ROU;21 959 278;237 500;188.9 Billion
 Russia;Asia;Moskva;55°45'N;37°35'E;7;RU / RUS;140 702 000;17 100 000;2.113 Trillion
 Rwanda;Africa;Kigali;01°59'S;30°04'E;250;RW / RWA;11 055 976;26 338;7.7 Billion
@@ -190,12 +190,36 @@ United Arab Emirates;Asia;Abu Dhabi;24°28'N;54°22'E;971;AE / ARE;4 975 593;82 88
 United Kingdom;Europe;London;51°36'N;00°05'W;44;GB / GBR;62 348 447;244 820;2.49 Trillion
 Tanzania;;Dodoma;06°08'S;35°45'E;255;TZ / TZA;41 892 895;945 087;31.94 Billion
 United States;North America;Washington DC;39°91'N;77°02'W;1;US / USA;310 232 863;9 629 091;16.72 Trillion
-United States of Virgin Islands;;Charlotte Amalie;18°21'N;64°56'W;;;;;
+United States of Virgin Islands;;Charlotte Amalie;18°21'N;64°56'W;;VI / VIR;;;
 Uruguay;South America;Montevideo;34°50'S;56°11'W;598;UY / URY;3 477 000;176 220;57.11 Billion
 Uzbekistan;Asia;Tashkent;41°20'N;69°10'E;998;UZ / UZB;27 865 738;447 400;55.18 Billion
 Vanuatu;Oceania;Port-Vila;17°45'S;168°18'E;678;VU / VUT;221 552;12 200;828 Million
 Venezuela;South America;Caracas;10°30'N;66°55'W;58;VE / VEN;27 223 228;912 050;367.5 Billion
 Vietnam;Asia;Hanoi;21°05'N;105°55'E;84;VN / VNM;89 571 130;329 560;170 Billion
-Yugoslavia;;Belgrade;44°50'N;20°37'E;;;;;
+Yugoslavia;;Belgrade;44°50'N;20°37'E;;FY / FYR;;;
 Zambia;Africa;Lusaka;15°28'S;28°16'E;260;ZM / ZMB;13 460 305;752 614;22.24 Billion
 Zimbabwe;Africa;Harare;17°43'S;31°02'E;263;ZW / ZWE;11 651 858;390 580;10.48 Billion
+Mongolia;Asia;Ulaanbaatar;47°55'N;106°53'E;;MN / MNG;;;
+Moldova;Europe;Chi?in?u;47°0'N;28°55'E;;MD / MDA;;;
+Serbia;Europe;Belgrade;44°48'N;20°28'E;;RS / SRB;;;
+Montenegro;Europe;Podgorica;42°47'N;19°28'E;;ME / MNE;;;
+Kosovo;Europe;Pristina;42°40'N;21°10'E;;YU / YUG;;;
+Macedonia;Europe;Skopje;42°0'N;21°26'E;;MK / MKD;;;
+Syria;Asia;Damascus;33°30'N;36°18'E;;SY / SYR;;;
+Palestine;Asia;Jerusalem;31°47'N;35°13'E;;PS / PSE;;;
+Libya;Africa;Tripoli;32°52'N;13°11'E;;LY / LBY;;;
+Morocco;Africa;Rabat;34°02'N;6°51'W;;MA / MAR;;;
+W. Sahara;Africa;Laayoune;34°02'N;6°51'W;;EH / ESH;;;
+Yemen;Africa;Sana'a;15°21'N;44°12'E;;YE / YEM;;;
+Somaliland;Africa;Hargeisa;9°33'N;44°03'E;;S_ / SP;;;
+S. Sudan;Africa;Juba;04°51'N;31°36'E;;SS / SSD;;;
+Côte d'Ivoire;Africa;Yamoussoukro;6°51'N;5°18'W;;IV / CIV;;;
+Trinidad and Tobago;South America;Port of Spain;10°17'N;61°28'W;;TT / TCA;;;
+Falkand Is.;South America;Stanley;51°42'S;57°51'W;;FK / FLK;;;
+Fr. S. Antarctic Lands;Antarctic;Saint-Pierre;21°20'S;55°28'E;;TF / TAF;;;
+Brunei;Asia;Bandar Seri Begawan;4°53'N;114°56'E;;BN / BRN;;;
+Lao PDR;Asia;Vientiane;17°58'N;102°36'E;;LA / LAO;;;
+Taiwan;Asia;Taipei;25°02'N;121°38'E;;TW / TWN;;;
+Korea;Asia;Seoul;37°34'N;126°58'E;;KS / KOR;;;
+Japan;Asia;Tokyo;35°41'N;139°46'E;;JP / JPN;;;
+Sri lanka;Asia;Sri Jayawardenepura Kotte;6°56'N;79°52'E;;LK / SLK;;;
