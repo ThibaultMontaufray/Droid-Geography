@@ -43,6 +43,7 @@ namespace Droid_Geography
         public void UpdateMap()
         {
             _newHtmlPage = _worldMap.WorldPage;
+            webBrowser.DocumentText = _worldMap.WorldPage;
         }
         #endregion
 

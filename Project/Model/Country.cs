@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Droid_Geography
 {
+    [Serializable]
     public class Country
     {
         #region Attribute
