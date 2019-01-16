@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Droid_Geography</id>
-    <version>1.0.0</version>
-    <title>Droid_Geography</title>
+    <id>Droid.Geography.UI</id>
+    <version>1.0.1</version>
+    <title>Droid.Geography.UI</title>
     <authors>Thibault MONTAUFRAY</authors>
     <owners>Servodroid</owners>
     <licenseUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools4Libraries/master/License</licenseUrl>
     <projectUrl>https://github.com/ThibaultMontaufray/Droid_Geography</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/ThibaultMontaufray/Tools4Libraries/master/ManagersDevComponents/servodroidIconColor.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Gives you controls on world map for your applications</description>
+    <description>UI for Droid.Geography library</description>
     <copyright>Copyright 2017</copyright>
     <tags>Servodroid world map countries country geography</tags>
   </metadata>
