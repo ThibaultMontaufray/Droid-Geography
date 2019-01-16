@@ -1,4 +1,4 @@
-﻿namespace Droid_Geography
+﻿namespace Droid.Geography
 {
     partial class WorldMapView
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Droid_Geography.Properties {
+namespace Droid.Geography.Properties {
     using System;
     
     
@@ -19,7 +19,7 @@ namespace Droid_Geography.Properties {
     // à l'aide d'un outil, tel que ResGen ou Visual Studio.
     // Pour ajouter ou supprimer un membre, modifiez votre fichier .ResX, puis réexécutez ResGen
     // avec l'option /str ou régénérez votre projet VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -39,7 +39,7 @@ namespace Droid_Geography.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Droid_Geography.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Droid.Geography.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,21 +57,6 @@ namespace Droid_Geography.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à Country;Continent;Capital;Latitude;Longitude;code;ISO;population;area;GDP
-        ///Afghanistan;Asia;Kabul;34°28&apos;N;69°11&apos;E;93;AF / AFG;29 121 286;647 500;20.65 Billion
-        ///Albania;Europe;Tirane;41°18&apos;N;19°49&apos;E;355;AL / ALB;2 986 952;28 748;12.8 Billion
-        ///Algeria;Africa;Algiers;36°42&apos;N;03°08&apos;E;213;DZ / DZA;34 586 184;2 381 740;215.7 Billion
-        ///American Samoa;;Pago Pago;14°16&apos;S;170°43&apos;W;1-684;AS / ASM;57 881;199;462.2 Million
-        ///Andorra;Europe;Andorra la Vella;42°31&apos;N;01°32&apos;E;376;AD / AND;84 000;468;4.8 Billion
-        ///Angola;Africa [le reste de la chaîne a été tronqué]&quot;;.
-        /// </summary>
-        internal static string countries {
-            get {
-                return ResourceManager.GetString("countries", resourceCulture);
             }
         }
     }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Droid_Geography
+namespace Droid.Geography
 {
     [Serializable]
     public class Country

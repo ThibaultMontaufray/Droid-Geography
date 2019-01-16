@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Droid_Geography.Properties {
+namespace Droid.Geography.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

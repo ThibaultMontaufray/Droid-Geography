@@ -1,6 +1,6 @@
-﻿namespace Droid_Geography
+﻿namespace Droid.Geography
 {
-    partial class Form1
+    partial class Demo
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -38,7 +38,7 @@
             this.labelTrigramme = new System.Windows.Forms.Label();
             this.labelArea = new System.Windows.Forms.Label();
             this.labelContinent = new System.Windows.Forms.Label();
-            this.worldMapView1 = new Droid_Geography.WorldMapView();
+            this.worldMapView1 = new Droid.Geography.WorldMapView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonPop = new System.Windows.Forms.RadioButton();
             this.radioButtonArea = new System.Windows.Forms.RadioButton();

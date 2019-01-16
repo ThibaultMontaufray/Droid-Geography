@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Droid_Geography.Model
+namespace Droid.Geography.Model
 {
     public class Coord
     {

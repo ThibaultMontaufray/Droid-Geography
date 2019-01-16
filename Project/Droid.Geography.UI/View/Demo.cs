@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Droid_Geography
+namespace Droid.Geography
 {
-    public partial class Form1 : Form
+    public partial class Demo : Form
     {
         #region Attribute
         private WorldMap _worldMap;
@@ -25,8 +25,9 @@ namespace Droid_Geography
         #endregion
 
         #region Constructor
-        public Form1()
+        public Demo()
         {
+            InterfaceGeo intGeo = new InterfaceGeo();
             InitializeComponent();
             Init();
         }

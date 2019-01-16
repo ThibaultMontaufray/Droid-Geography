@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Droid_Geography
+namespace Droid.Geography
 {
     public class WorldMap
     {
@@ -269,7 +269,7 @@ namespace Droid_Geography
             string[] tab;
             _countries = new List<Country>();
 
-            string fileText = Properties.Resources.countries;
+            string fileText = Resource.countries;
 
             foreach (string block in Regex.Split(fileText, "\r"))
             {
